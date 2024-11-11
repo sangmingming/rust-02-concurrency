@@ -20,7 +20,7 @@ mod test {
     fn test_matrix_multiply() -> Result<()> {
         let a = Matrix::new(&[1, 2, 3, 4, 5, 6], 2, 3);
         let b = Matrix::new(&[1, 2, 3, 4, 5, 6], 3, 2);
-        let c = multiply(&a, &b)?;
+        let c = a * b;
         assert_eq!(2, c.col);
         assert_eq!(2, c.row);
         assert_eq!(
