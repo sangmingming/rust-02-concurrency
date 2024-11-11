@@ -5,3 +5,5 @@ edition = "2021"
 license = "Apache-2.0"
 
 [dependencies]
+anyhow = "1.0.93"
+rand = "0.8.5"
