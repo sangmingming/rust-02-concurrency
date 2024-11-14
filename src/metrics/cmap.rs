@@ -4,17 +4,17 @@ use dashmap::DashMap;
 use std::sync::Arc;
 
 #[derive(Debug, Clone)]
-pub struct Metrics {
+pub struct CMetrics {
     data: Arc<DashMap<String, i64>>,
 }
 
-impl Default for Metrics {
+impl Default for CMetrics {
     fn default() -> Self {
         Self::new()
     }
 }
 
-impl fmt::Display for Metrics {
+impl fmt::Display for CMetrics {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "{{")?;
         for entry in self.data.iter() {
@@ -25,9 +25,9 @@ impl fmt::Display for Metrics {
     }
 }
 
-impl Metrics {
+impl CMetrics {
     pub fn new() -> Self {
-        Metrics {
+        CMetrics {
             data: Arc::new(DashMap::new()),
         }
     }
