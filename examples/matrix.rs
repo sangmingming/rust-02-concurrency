@@ -1,5 +1,5 @@
 use anyhow::Result;
-use rust_template::{multiply, Matrix};
+use concurrency::{multiply, Matrix};
 
 #[allow(clippy::needless_borrows_for_generic_args)]
 fn main() -> Result<()> {
